@@ -1,0 +1,36 @@
+.jumbotron-custom {
+    padding: 50px 0;
+    background: #0077ff;
+    background-color: #0077ff;
+}
+
+.jumbotron-custom h1 {
+    font-size: 100px;
+}
+
+.jumbotron-custom p {
+    font-size: 40px;
+    margin: 20px 0;
+}
+
+.jumbotron-custom .btn-large {
+    font-size: 30px;
+    padding: 21px 35px;
+}
+
+.jumbotron-custom .shameless-self-promotion {
+    margin-top: 30px;
+}
+
+.jumbotron-ad {
+    padding: 50px 0;
+}
+
+.jumbotron-ad h1 {
+    font-size: 90px;
+}
+
+.jumbotron-ad p {
+    font-size: 35px;
+    margin: 20px 0;
+}

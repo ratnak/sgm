@@ -1,0 +1,23 @@
+<form id="recoverform" action="#">
+   <p>Enter your e-mail address below and we will send you instructions how to recover a password.</p>
+   <div class="input-group">
+     <span class="input-group-addon"><i class="icon-envelope"></i></span><input class="form-control" type="text" placeholder="E-mail address" />
+   </div>
+   <div class="form-actions clearfix">
+      <div class="pull-left">
+         <%= link_to 'Click to login', new_user_session_path ,:class =>"grey flip-link to-login" %>
+      </div>
+      <div class="pull-right">
+         <%= link_to 'Create new account', new_user_registration_path ,:class =>"flip-link to-register blue" %>
+      </div>
+   <input type="submit" class="btn btn-block btn-inverse" value="Recover" />
+   </div>
+</form>
+
+
+<style>
+#loginbox {
+  height: 200px;
+}
+</style>
+

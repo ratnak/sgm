@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SympleGym Admin</title>
+		    <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <%= stylesheet_link_tag 'setup', :media => "all" %>
+        <%= javascript_include_tag 'setup' %>
+    </head>
+    <body>
+        <div id="container">
+
+
+            <div id="logo">
+                <img src="/assets/logo.png" alt="" />
+            </div>
+
+            <div id="user">
+
+                <div class="avatar">
+                    <div class="inner"></div>
+                    <img src="/assets/demo/av1_1.jpg" />
+                </div>
+
+                <div class="text">
+                    <h4>Hello,<span class="user_name"></span></h4>
+                </div>
+
+            </div>
+
+            <div id="loginbox">      
+              <%= yield %>
+            </div>
+
+        </div>
+        
+    </body>
+</html>

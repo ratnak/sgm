@@ -1,0 +1,32 @@
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html=>{:id => 'loginform'}) do |f| %>
+   <p>Enter username and password to continue.</p>
+   <div class="input-group input-sm">
+      <span class="input-group-addon"><i class="icon-user"></i></span>
+      <%= f.email_field :email, :autofocus => true, :class => 'form-control',:id => 'username',:placeholder=>"Email" %>
+    </div>
+    <div class="input-group">
+       <span class="input-group-addon"><i class="icon-lock"></i></span>
+       <%= f.password_field :password,:class => 'form-control',:id => 'password',:placeholder=>"Password"  %>
+    </div>
+    <div class="form-actions clearfix">
+       <div class="pull-left">
+          <%= link_to 'Create new account', new_user_registration_path ,:class =>"flip-link to-register blue" %>
+       </div>
+       <div class="pull-right">
+			    <%= link_to "Lost password?", new_password_path(resource_name),:class =>"grey flip-link to-recover"  %>
+       </div>
+       <input type="submit" class="btn btn-block btn-primary btn-default" value="Login" />
+     </div>
+     <div class="footer-login">
+       <div class="pull-left text">
+          Login with
+        </div>
+       <div class="pull-right btn-social">
+          <a class="btn btn-facebook" href="#"><i class="icon-facebook"></i></a>
+          <a class="btn btn-twitter" href="#"><i class="icon-twitter"></i></a>
+          <a class="btn btn-google-plus" href="#"><i class="icon-google-plus"></i></a>
+       </div>
+      </div>
+
+<% end %>
+

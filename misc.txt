@@ -1,0 +1,25 @@
+Large text input fields are just cooler. CSS: .submissionfield { font-size:32px; height: 40px; border: 1px solid #999999; padding: 5px; }
+
+
+rails generate controller Static index
+rails generate scaffold Gym name:string website:string email:string
+rails generate controller Setup index
+rails generate controller Member profile new update
+
+To do:
+1) Users need to be able to manage themselves (reset password, update etc)
+2) Gym owners need to be able to manager members (update, delete)
+3) Need requirements on payment subscriptions
+
+
+
+Gyms need:
+
+Bank Account to deposit money into
+Subscriptions to govern pricing
+
+Users need:
+
+Picture for profile
+birthday
+Payment method (credit card or bank)

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @gym.name %>
+</p>
+
+<p>
+  <b>Website:</b>
+  <%= @gym.website %>
+</p>
+
+
+<br/><br/>
+<h1>Members</h1>
+
+<table class="table table-condensed table-flipped">
+  <tr>
+    <th>Name</th>
+    <th>email</th>
+  </tr>
+
+  <% @gym.users.each do |user| %>
+      <tr>
+        <td><%= link_to user.name, member_profile_path(user) %></td>
+        <td><%= user.email %></td>
+
+      </tr>
+  <% end %>
+</table>
+
+
+<%= link_to 'add member', member_new_path ,class: 'btn btn-info btn-mini' %> 
+<%= link_to 'Edit', edit_gym_path(@gym) ,class: 'btn btn-primary btn-mini' %> 
+<%= link_to 'Back', gyms_path , class: 'btn btn-mini'%>

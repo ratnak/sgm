@@ -1,0 +1,24 @@
+<div class="span4 well">
+  <legend>New Member</legend>
+
+  <%= form_for(@user, :url => member_create_path ) do |f| %>
+          <% if @user.errors.any? %>
+          <div class="alert alert-error">
+            <strong><%= pluralize(@user.errors.count, "error") %> prohibited this member from being saved:</strong>
+            <ul>
+              <% @user.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+      <% end %>
+
+      <input class="span4" name="user[name]" placeholder="Your Full Name" type="text" value="<%= @user.name %>">
+      <%= f.email_field :email, :autocomplete => "off", :class => "span4", :placeholder => "Email Address" %>
+      <%= f.password_field :password, :autocomplete => "off", :class => "span4", :placeholder => "Password" %>
+      <%= f.password_field :password_confirmation, :autocomplete => "off", :class => "span4", :placeholder => "Confirm Password" %>
+      <div class="actions">
+        <%= f.submit "Save", :class => "btn btn-primary" %>
+      </div>
+  <% end %>
+</div>

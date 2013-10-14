@@ -1,0 +1,40 @@
+<div class="widget-box">
+   <div class="widget-title">
+			<span class="icon"><i class="icon-signal"></i></span>
+      <h5>Listing gyms</h5>
+      <div class="buttons">
+        <a href="#" class="btn"><i class="icon-refresh"></i> <span class="text">Update gymlist</span></a>
+      </div>
+    </div>
+							
+    <div class="widget-content">
+			 <div class="row">
+					<div class="col-xs-12">
+           <table class="table table-condensend table-flipped">
+						<tr>
+							<th>Name</th>
+							<th>Website</th>
+							<th></th>
+							<th></th>
+							<th></th>
+						</tr>
+
+					<% @gyms.each do |gym| %>
+						<tr>
+							<td><%= gym.name %></td>
+							<td><%= gym.website %></td>
+							<td><%= link_to 'Show', gym , class: 'btn btn-xs btn-success'%></td>
+							<td><%= link_to 'Edit', edit_gym_path(gym) ,class: 'btn btn-xs btn-primary'%></td>
+							<td><%= link_to 'Destroy', gym, method: :delete, data: { confirm: 'Are you sure?' },class: 'btn btn-xs btn-danger' %></td>
+						</tr>
+					<% end %>
+					</table>
+
+  
+         <%= link_to 'New Gym', new_gym_path , class: 'btn btn-xs btn-info pull-left'%>
+
+         </div>
+       </div>
+    </div>
+</div>
+

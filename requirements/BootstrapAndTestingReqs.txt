@@ -1,0 +1,20 @@
+Start by downloading the rails application and running it.  This application is a basic member (user) management application for gyms (places to workout and lift weights).
+
+I'd like you to update the following views to use Twitter bootstrap.  Make them look as good as you can in about three to four hours.  The should help you get comfortable with the application.
+
+1) static/index.html.erb (http://localhost:3000/)
+2) devise/registration/new.html.erb (http://localhost:3000/users/register)
+3) devise/sessions/new.html.erb (http://localhost:3000/users/login)
+4) devise/passwords/new.html.erb (http://localhost:3000/users/password/new)
+5) gyms/show.html.erb
+6) gyms/edit.html.erb
+7) gyms/_form.html.erb 
+8) member/new.html.erb 
+9) member/myprofile.html.erb 
+10) users/edit.html.erb 
+11) users/_form.html.erb
+
+After this, spend any remaining time you have writing a few basic unit or integration tests for the gym and user models and the various controllers.
+
+
+
